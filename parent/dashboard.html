@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parent Dashboard</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">👪 Parent Portal</h2>
+      <p class="subtitle">School Management</p>
+      <nav>
+        <ul>
+          <li><a class="active" href="#">🏠 Dashboard</a></li>
+          <li><a href="#">🧒 Children</a></li>
+          <li><a href="#">📑 Reports</a></li>
+          <li><a href="#">📅 Events</a></li>
+          <li><a href="#">💬 Messages</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </nav>
+
+      <div class="quick-switch">
+        <p>Quick Switch (Demo)</p>
+        <button>Student</button>
+        <button class="active">Parent</button>
+        <button>Teacher</button>
+        <button>Admin</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Dashboard</h1>
+        <span>Welcome, Parent!</span>
+      </header>
+
+      <!-- Grades and Events -->
+      <section class="cards" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <!-- Recent Grades -->
+        <div class="card">
+          <h3>📈 Recent Grades</h3>
+          <ul class="grades-list">
+            <li>Mathematics <span class="badge grade">A-</span><small>87%</small></li>
+            <li>Science <span class="badge grade">B+</span><small>83%</small></li>
+            <li>English <span class="badge grade">A</span><small>91%</small></li>
+          </ul>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div class="card">
+          <h3>📅 Upcoming Events</h3>
+          <ul class="events-list">
+            <li><strong>Mar 15</strong> - Parent-Teacher Conference <br><small>Emma Smith • 2:00 PM</small></li>
+            <li><strong>Mar 18</strong> - Science Fair <br><small>James Smith • 10:00 AM</small></li>
+            <li><strong>Mar 22</strong> - Math Competition <br><small>Emma Smith • 1:00 PM</small></li>
+          </ul>
+        </div>
+
+        <!-- Fee Status -->
+        <div class="card" style="grid-column: span 2;">
+          <h3>💰 Fee Status</h3>
+          <div class="fee-box">
+            <p><strong>Emma Smith</strong> <span class="badge paid">paid</span></p>
+            <p>Annual Tuition: $1200</p>
+            <p class="paid-amount">Paid: $1200</p>
+          </div>
+          <div class="fee-box">
+            <p><strong>James Smith</strong> <span class="badge pending">pending</span></p>
+            <p>Annual Tuition: $1000</p>
+            <p class="paid-amount">Paid: $800</p>
+            <p class="pending-amount">Pending: $200</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Admin Profile</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="edit-profile-container">
+    <h1>Edit Profile</h1>
+    <form class="edit-form" action="#" method="POST" enctype="multipart/form-data">
+      
+      <label for="profileImage">Profile Picture</label>
+      <input type="file" id="profileImage" name="profileImage">
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" value="Joan Moraro" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" value="joan.admin@school.com" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" value="+254 712 345 678" required>
+
+      <label for="password">New Password</label>
+      <input type="password" id="password" name="password" placeholder="Leave blank to keep current password">
+
+      <div class="form-actions">
+        <button type="submit" class="save-btn">Save Changes</button>
+        <a href="profile.html" class="cancel-btn">Cancel</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

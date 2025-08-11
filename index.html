@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Login</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #f1f5f9;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-card {
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .login-card h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .login-card .logo {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    .login-card select, 
+    .login-card input {
+      width: 100%;
+      padding: 10px;
+      margin: 0.5rem 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .login-card button {
+      width: 100%;
+      background: #3b82f6;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .login-card button:hover {
+      background: #2563eb;
+    }
+
+    .login-card .bottom-text {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .login-card .bottom-text a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+
+    .login-card .bottom-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <div class="logo">🏫</div>
+    <h2>Login to School Portal</h2>
+
+    <label for="role">Select Role</label>
+    <select id="role" name="role">
+      <option>Student</option>
+      <option>Parent</option>
+      <option>Teacher</option>
+      <option>Headteacher</option>
+    </select>
+
+    <label for="email">Email or Username</label>
+    <input type="text" id="email" placeholder="Enter email or username" />
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password" />
+
+    <button type="submit">Login</button>
+
+    <div class="bottom-text">
+      <p><a href="#">Forgot password?</a></p>
+      <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

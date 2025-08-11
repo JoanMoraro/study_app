@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Reports</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .tab-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .tab-btn.active {
+            background: #388E3C;
+        }
+        .report-section {
+            display: none;
+        }
+        .report-section.active {
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .export-buttons {
+            margin-bottom: 15px;
+        }
+        .export-buttons button {
+            margin-right: 10px;
+            padding: 8px 15px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="manage_users.html">Manage Users</a>
+        <a href="classes.html">Classes</a>
+        <a href="reports.html" class="active">Reports</a>
+        <a href="settings.html">Settings</a>
+    </div>
+
+    <div class="main-content">
+        <h1>Reports</h1>
+
+        <div class="tab-container">
+            <button class="tab-btn active" onclick="showTab('attendance')">Attendance</button>
+            <button class="tab-btn" onclick="showTab('grades')">Grades</button>
+            <button class="tab-btn" onclick="showTab('payments')">Payments</button>
+        </div>
+
+        <div class="report-section active" id="attendance">
+            <div class="export-buttons">
+                <button>Export PDF</button>
+                <button>Export CSV</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>John Doe</td><td>2025-08-01</td><td>Present</td></tr>
+                    <tr><td>Jane Smith</td><td>2025-08-01</td><td>Absent</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="report-section" id="grades">
+            <div class="export-buttons">
+                <button>Export PDF</button>
+                <button>Export CSV</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Subject</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>John Doe</td><td>Math</td><td>A</td></tr>
+                    <tr><td>Jane Smith</td><td>Science</td><td>B+</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="report-section" id="payments">
+            <div class="export-buttons">
+                <button>Export PDF</button>
+                <button>Export CSV</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>John Doe</td><td>$200</td><td>2025-08-01</td><td>Paid</td></tr>
+                    <tr><td>Jane Smith</td><td>$150</td><td>2025-08-01</td><td>Pending</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.report-section').forEach(section => section.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

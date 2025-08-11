@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Users</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script defer src="js/admin.js"></script>
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">⚙️ Admin Panel</h2>
+      <p class="subtitle">School Management</p>
+      <nav>
+        <ul>
+          <li><a class="active" href="#">🏠 Dashboard</a></li>
+          <li><a href="#">📑 All Reports</a></li>
+          <li><a href="#">🧍 Attendance</a></li>
+          <li><a href="#">👨‍🏫 Staff</a></li>
+      
+          <!-- Dropdown Menu -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">👥 Manage Users ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="classes.html">🏫 Classes</a></li>
+              <li><a href="payments.html">💰 Payments</a></li>
+              <li><a href="reports.html">📑 Reports</a></li>
+              <li><a href="settings.html">⚙️ Settings</a></li>
+            </ul>
+          </li>
+      
+          <li><a href="#">📊 School Stats</a></li>
+          <li><a href="#">💬 Messages</a></li>
+        </ul>
+      </nav>
+      
+      <div class="quick-switch">
+        <p>Quick Switch</p>
+        <button>Student</button>
+        <button>Parent</button>
+        <button>Teacher</button>
+        <button>Headteacher</button>
+        <button class="active">Admin</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Manage Users</h1>
+        <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+      </header>
+
+      <section class="user-controls">
+        <h2>All Users</h2>
+        <div class="controls">
+          <input type="text" id="searchInput" placeholder="Search by name or email" />
+          <select id="roleFilter">
+            <option value="">All Roles</option>
+            <option>Student</option>
+            <option>Teacher</option>
+            <option>Parent</option>
+            <option>Headteacher</option>
+          </select>
+          <a href="add-user.html" class="add-user-btn">➕ Add New User</a>
+        </div>
+      </section>
+      
+      <section>
+        <table class="user-table" id="userTable">
+          <thead>
+            <tr>
+              <th>Profile</th>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-role="Student">
+              <td><img src="../assets/images/student1.jpg" class="avatar" alt="Emma" /></td>
+              <td>Emma Smith</td>
+              <td>Student</td>
+              <td>emma@student.com</td>
+              <td><button onclick="openEditModal('Emma Smith', 'Student', 'emma@student.com')">Edit</button></td>
+            </tr>
+            <tr data-role="Teacher">
+              <td><img src="../assets/images/teacher1.jpg" class="avatar" alt="John" /></td>
+              <td>John Doe</td>
+              <td>Teacher</td>
+              <td>john@teacher.com</td>
+              <td><button onclick="openEditModal('John Doe', 'Teacher', 'john@teacher.com')">Edit</button></td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </section>
+      
+    </main>
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="modal" id="editModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeEditModal()">&times;</span>
+      <h2>Edit User</h2>
+      <form id="editForm">
+        <label>Name</label>
+        <input type="text" id="editName" />
+        <label>Role</label>
+        <select id="editRole">
+          <option>Student</option>
+          <option>Teacher</option>
+          <option>Parent</option>
+          <option>Headteacher</option>
+        </select>
+        <label>Email</label>
+        <input type="email" id="editEmail" />
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

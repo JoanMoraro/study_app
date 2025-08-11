@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">📘 Student Portal</h2>
+      <p class="subtitle">School Management</p>
+      <nav>
+        <ul>
+          <li><a class="active" href="#">🏠 Dashboard</a></li>
+          <li><a href="#">📊 Grades</a></li>
+          <li><a href="#">📅 Schedule</a></li>
+          <li><a href="#">💬 Messages</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </nav>
+
+      <div class="quick-switch">
+        <p>Quick Switch (Demo)</p>
+        <button>Student</button>
+        <button>Parent</button>
+        <button>Teacher</button>
+        <button>Admin</button>
+      </div>
+
+      <div class="user-info">
+        <p>👤 User Name<br><span>Student</span></p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Dashboard</h1>
+        <span>Student Portal</span>
+        <div class="date">Today’s Date: <strong>8/6/2025</strong></div>
+      </header>
+
+      <!-- Welcome Banner -->
+      <section class="banner">
+        <h2>Welcome back, Alex Johnson!</h2>
+        <p>Grade 10 - Section A • ID: STU-2024-001</p>
+      </section>
+
+      <!-- Summary Cards -->
+      <section class="cards">
+        <div class="card"><h3>📈 Overall GPA</h3><p class="value">3.85</p></div>
+        <div class="card"><h3>📚 Subjects</h3><p class="value">8</p></div>
+        <div class="card"><h3>⏰ Attendance</h3><p class="value">96%</p></div>
+        <div class="card"><h3>🏅 Achievements</h3><p class="value">12</p></div>
+        <div class="card"><h3>💰 Fee Balance</h3><p><strong>Total:</strong> KES 30,000<br><strong>Paid:</strong> KES 25,000<br><strong>Balance:</strong> <span class="fee">KES 5,000</span></p></div>
+      </section>
+
+      <!-- Grades and Schedule -->
+      <section class="grades-schedule">
+        <div class="grades">
+          <h3>📈 Recent Grades</h3>
+          <ul>
+            <li>Mathematics <span class="score">92%</span></li>
+            <li>English <span class="score">89%</span></li>
+            <li>Science <span class="score">85%</span></li>
+          </ul>
+        </div>
+        <div class="schedule">
+          <h3>📅 Today's Schedule</h3>
+          <ul>
+            <li><strong>09:00 AM</strong> - Mathematics (Mr. Smith - Room 101)</li>
+            <li><strong>11:00 AM</strong> - English (Ms. Jane - Room 103)</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

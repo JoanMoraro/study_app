@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Classes - Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    /* Table Styling */
+.table-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table-section th,
+.table-section td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.table-section th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.table-section tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-section tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table-section button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.table-section button:first-child {
+  background-color: #007bff;
+  color: white;
+}
+
+.table-section button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-add {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: #0056b3;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">🏫 Admin</h2>
+      <p class="subtitle">School Management</p>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="#">📑 All Reports</a></li>
+          <li><a href="#">🧍 Attendance</a></li>
+          <li><a href="#">👨‍🏫 Staff</a></li>
+          <li><a href="manage-users.html">👥 Manage Users</a></li>
+          <li><a class="active" href="classes.html">📚 Classes</a></li>
+          <li><a href="#">📊 School Stats</a></li>
+          <li><a href="#">💬 Messages</a></li>
+        </ul>
+      </nav>
+
+      <div class="quick-switch">
+        <p>Quick Switch (Demo)</p>
+        <button>Student</button>
+        <button>Parent</button>
+        <button>Teacher</button>
+        <button class="active">Admin</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Classes</h1>
+        <span>Manage all school classes here</span>
+      </header>
+      <div class="page-header">
+        <a href="add_class.html" class="btn-add">+ Add Class</a>
+    </div>
+
+      <!-- Classes Table -->
+      <section class="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Class ID</th>
+              <th>Class Name</th>
+              <th>Teacher</th>
+              <th>No. of Students</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Grade 1</td>
+              <td>Mr. Smith</td>
+              <td>32</td>
+              <td>
+                <a href="edit_class.html" class="edit-btn">Edit</a>
+                <a href="#" class="delete-btn">Delete</a>
+            </td>
+            
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Grade 2</td>
+              <td>Mrs. Johnson</td>
+              <td>30</td>
+              <td>
+                  <a href="edit_class.html" class="edit-btn">Edit</a>
+                <a href="#" class="delete-btn">Delete</a>
+            </td>
+            
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Grade 3</td>
+              <td>Ms. Lee</td>
+              <td>28</td>
+              <td>
+                <a href="edit_class.html" class="edit-btn">Edit</a>
+                <a href="#" class="delete-btn">Delete</a>
+            </td>
+            
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
